@@ -1,4 +1,4 @@
-# library imports
+# Standard library imports
 import tarfile
 import urllib.request
 from pathlib import Path
@@ -15,7 +15,7 @@ from sklearn.preprocessing import FunctionTransformer, OneHotEncoder, StandardSc
 num_attribs = ["longitude", "latitude", "housing_median_age", "total_rooms",
  "total_bedrooms", "population", "households", "median_income"]
 cat_attribs = ["ocean_proximity"]
-cat_pipeline = make_pipeline(
+ cat_pipeline = make_pipeline(
  SimpleImputer(strategy="most_frequent"),
  OneHotEncoder(handle_unknown="ignore"))
 
